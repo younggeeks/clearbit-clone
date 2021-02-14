@@ -3,16 +3,15 @@ import React from "react";
 interface MenuProps {
   visible: Boolean;
 }
-import Pointer from "./Pointer"
+import Pointer from "./Pointer";
 const WhyClearbit: React.FC<MenuProps> = ({ visible }) => {
   return (
     <div
-      className={`grid grid-cols-2  max-w-3xl w-large-card bg-dropdown rounded-lg shadow-lg absolute top-why-clearbit-top -left-why-clearbit-left ${
+      className={`grid grid-cols-2  max-w-3xl w-large-card bg-dropdown rounded-lg shadow-lg absolute z-10 top-12 -left-80 ${
         visible ? "scale-100" : "scale-0 opacity-0"
       } transition-transform duration-200 ease-in-out transform `}
     >
-
-      <Pointer position="left-pointer -top-2"/>
+      <Pointer position="left-pointer -top-2" />
       <div className="p-8 relative">
         <h6 className="text-blue-300 text-xl font-extralight pb-6 border-b border-blue-300 border-opacity-10">
           Clearbit

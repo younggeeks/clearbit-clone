@@ -10,7 +10,6 @@ export default function Home() {
       </Head>
 
       <main>
-        {/* <Header /> */}
         <ClearbitHeader />
       </main>
 

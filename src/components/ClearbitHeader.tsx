@@ -4,13 +4,13 @@ import WhyClearbit from "./WhyClearbit";
 import Products from "./Products";
 import Solutions from "./Solutions";
 import { WHY_CLEARBIT, PRODUCTS, SOLUTIONS } from "../utils/constants";
-
+import HeroSection from "./Hero";
 
 const ClearbitHeader = () => {
   const [selectedMenu, setSelectedMenu] = useState("");
   return (
     <div className="bg-gradient-to-br from-cyanish to-bluish h-hero">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto flex flex-col">
         <div className="h-20 flex items-center justify-between">
           <img
             src="/img/clearbit-logo-clear.png"
@@ -19,9 +19,14 @@ const ClearbitHeader = () => {
           />
           <nav className="flex text-white font-normal text-sm items-center group relative">
             <ul className="flex  space-x-12 ">
-              <li className="flex items-center cursor-pointer transform hover:scale-110  transition-transform duration-150 ease-in-out relative " onClick={e=>{
-                  setSelectedMenu(selectedMenu === WHY_CLEARBIT ? '': WHY_CLEARBIT)
-              }}>
+              <li
+                className="flex items-center cursor-pointer transform hover:scale-110  transition-transform duration-150 ease-in-out relative "
+                onClick={(e) => {
+                  setSelectedMenu(
+                    selectedMenu === WHY_CLEARBIT ? "" : WHY_CLEARBIT
+                  );
+                }}
+              >
                 <Link href="/">Why Clearbit?</Link>
 
                 <svg
@@ -39,9 +44,12 @@ const ClearbitHeader = () => {
                   />
                 </svg>
               </li>
-              <li className="flex items-center cursor-pointer transform hover:scale-110  transition-transform duration-150 ease-in-out" onClick={e=>{
-                  setSelectedMenu(selectedMenu === PRODUCTS ? '': PRODUCTS)
-              }}>
+              <li
+                className="flex items-center cursor-pointer transform hover:scale-110  transition-transform duration-150 ease-in-out"
+                onClick={(e) => {
+                  setSelectedMenu(selectedMenu === PRODUCTS ? "" : PRODUCTS);
+                }}
+              >
                 <Link href="/">Products</Link>
                 <svg
                   height="18"
@@ -57,9 +65,12 @@ const ClearbitHeader = () => {
                   />
                 </svg>
               </li>
-               <li className="flex items-center cursor-pointer transform hover:scale-110  transition-transform duration-150 ease-in-out" onClick={e=>{
-                  setSelectedMenu(selectedMenu === SOLUTIONS ? '': SOLUTIONS)
-              }}>
+              <li
+                className="flex items-center cursor-pointer transform hover:scale-110  transition-transform duration-150 ease-in-out"
+                onClick={(e) => {
+                  setSelectedMenu(selectedMenu === SOLUTIONS ? "" : SOLUTIONS);
+                }}
+              >
                 <Link href="/">Solutions</Link>
                 <svg
                   height="18"
@@ -91,14 +102,18 @@ const ClearbitHeader = () => {
                 Get Started
               </button>
             </div>
-                <WhyClearbit visible={selectedMenu === WHY_CLEARBIT} />
-                <Products visible={selectedMenu === PRODUCTS} />
-                <Solutions visible={selectedMenu === SOLUTIONS} />
-
+            <WhyClearbit visible={selectedMenu === WHY_CLEARBIT} />
+            <Products visible={selectedMenu === PRODUCTS} />
+            <Solutions visible={selectedMenu === SOLUTIONS} />
           </nav>
         </div>
+        <main className="w-full grid grid-cols-2 text-white text-5xl font-extralight font-sans mt-9">
+          <HeroSection />
+          <section>
+            
+          </section>
+        </main>
       </div>
-
     </div>
   );
 };
