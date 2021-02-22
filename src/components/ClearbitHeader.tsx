@@ -5,11 +5,12 @@ import Products from "./Products";
 import Solutions from "./Solutions";
 import { WHY_CLEARBIT, PRODUCTS, SOLUTIONS } from "../utils/constants";
 import HeroSection from "./Hero";
+import MobileNav from "./MobileNav";
 
 const ClearbitHeader = () => {
   const [selectedMenu, setSelectedMenu] = useState("");
   return (
-    <div className="bg-gradient-to-br from-cyanish to-bluish h-hero">
+    <div className="bg-gradient-to-br from-cyanish to-bluish h-hero mb-12 lg:mb-32 px-10  lg:px-10 xl:px-0">
       <div className="max-w-6xl mx-auto flex flex-col">
         <div className="h-20 flex items-center justify-between">
           <img
@@ -17,8 +18,49 @@ const ClearbitHeader = () => {
             alt="Clearbit Logo"
             className="h-8"
           />
-          <nav className="flex text-white font-normal text-sm items-center group relative">
-            <ul className="flex  space-x-12 ">
+
+          <button
+            className="block md:hidden lg:hidden xl:hidden "
+            onClick={() => {}}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="h-6 text-white"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+          <button
+            className="hidden md:block lg:hidden xl:hidden "
+            onClick={() => {
+              setSelectedMenu(selectedMenu === PRODUCTS ? "" : PRODUCTS);
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="h-6 text-white"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+          <nav className="lg:flex lg:opacity-100  text-white font-normal text-sm items-center group relative hidden ">
+            <ul className="lg:flex  space-x-12 hidden  ">
               <li
                 className="flex items-center cursor-pointer transform hover:scale-110  transition-transform duration-150 ease-in-out relative "
                 onClick={(e) => {
@@ -94,7 +136,7 @@ const ClearbitHeader = () => {
               </li>
             </ul>
 
-            <div className="space-x-4 ml-24 flex items-center">
+            <div className="space-x-4 ml-24 lg:flex items-center hidden ">
               <div className="transform hover:scale-110  transition-transform duration-150 ease-in-out ">
                 <Link href="/">Log In</Link>
               </div>
@@ -105,13 +147,11 @@ const ClearbitHeader = () => {
             <WhyClearbit visible={selectedMenu === WHY_CLEARBIT} />
             <Products visible={selectedMenu === PRODUCTS} />
             <Solutions visible={selectedMenu === SOLUTIONS} />
+            {/* <MobileNav /> */}
           </nav>
         </div>
-        <main className="w-full grid grid-cols-2 text-white text-5xl font-extralight font-sans mt-9">
+        <main className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 text-white text-5xl font-extralight font-sans mt-9">
           <HeroSection />
-          <section>
-            
-          </section>
         </main>
       </div>
     </div>

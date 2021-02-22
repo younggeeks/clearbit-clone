@@ -1,5 +1,40 @@
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  overflow-x: hidden;
+}
+
+@layer base {
+  @font-face {
+    font-family: "avenir next";
+    src: local("avenir next"),
+      url(./../fonts/AvenirNextLTPro-It.otf) format("otf");
+  }
+  @font-face {
+    font-family: "avenir next";
+    src: local("avenir next"),
+      url(../fonts/AvenirNextLTPro-Bold.otf) format("otf");
+  }
+  @font-face {
+    font-family: "avenir next";
+    src: local("avenir next"),
+      url(../fonts/AvenirNextLTPro-BoldCn.otf) format("otf");
+  }
+  @font-face {
+    font-family: "avenir next";
+    src: local("avenir next"),
+      url(../fonts/AvenirNextLTPro-Demi.otf) format("otf");
+  }
+  @font-face {
+    font-family: "avenir next";
+    src: local("avenir next"),
+      url(../fonts/AvenirNextLTPro-DemiCn.otf) format("otf");
+  }
+  @font-face {
+    font-family: "avenir next";
+    src: local("avenir next"),
+      url(../fonts/AvenirNextLTPro-Regular.otf) format("otf");
+  }
+}

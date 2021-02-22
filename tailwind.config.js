@@ -9,13 +9,37 @@ module.exports = {
   theme: {
     colors: {
       ...colors,
+      dropdown: "#192a42",
+      "navy-0": "#f2f6fa",
+      "navy-100": "#dde8f4",
+      "navy-200": "#a1bddc",
+      "navy-300": "#6b90c0",
+      "navy-400": "#3b64a0",
+      "navy-500": "#2a456d",
+      "navy-600": "#253e62",
+      "navy-700": "#213757",
+      "navy-800": "#192a42",
+      "navy-900": "#101c2c",
+      "navy-1000": "#080e16",
+      "navy-dark": "#1d2731",
     },
+
     gradientColorStops: (theme) => ({
       "btn-start": "#426399",
       "btn-end": "#30466b",
     }),
 
     extend: {
+      fontFamily: {
+        sans: ["avenir next", "Helvetica", "Arial", "sans-serif"],
+      },
+      fontSize: {
+        "md-card": "15px",
+      },
+      textColor: {
+        "card-body": "#2b4667",
+        "footer-link": "#4db1fd",
+      },
       animation: {
         heart: "heart 4s ease-in-out  2s infinite alternate",
         "heart-1": "heart 4s ease-in-out  3s infinite alternate",
@@ -31,12 +55,26 @@ module.exports = {
       },
       backgroundColor: (theme) => ({
         dropdown: "#192a42",
+        "navy-0": "#f2f6fa",
+        "navy-100": "#dde8f4",
+        "navy-200": "#a1bddc",
+        "navy-300": "#6b90c0",
+        "navy-400": "#3b64a0",
+        "navy-500": "#2a456d",
+        "navy-600": "#253e62",
+        "navy-700": "#213757",
+        "navy-800": "#192a42",
+        "navy-900": "#101c2c",
+        "navy-1000": "#080e16",
+        "navy-dark": "#1d2731",
       }),
       backgroundImage: (theme) => ({
         "hero-pattern": "url('/img/nio-bg.png')",
       }),
       height: {
         hero: "700px",
+        "md-card": "535px",
+        "lg-card": "650px",
       },
       width: {
         "large-card": "700px",
@@ -44,6 +82,7 @@ module.exports = {
         "md-card": "500px",
       },
       gradientColorStops: (theme) => ({
+        ...colors,
         bluish: "#4089cc",
         cyanish: "rgb(112,185,198)",
       }),

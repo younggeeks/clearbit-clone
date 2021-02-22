@@ -10,7 +10,7 @@ const Products: React.FC<MenuProps> = ({ visible }) => {
         visible ? "scale-100" : "scale-0 opacity-0"
       } transition-transform duration-200 ease-in-out transform `}
     >
-      <Pointer position="left-44 -top-2" />
+      <Pointer position="left-44 -top-2  " />
       <div className="p-8">
         <h6 className="text-blue-300 text-xl font-extralight pb-6 border-b border-blue-300 border-opacity-10">
           Products

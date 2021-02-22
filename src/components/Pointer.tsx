@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const Pointer = ({position}) => {
-    return (
-        <div className={`h-6 w-4 absolute  bg-dropdown transform rotate-45 ${position}`} >
+const Pointer = ({ position }) => {
+  return (
+    <div
+      className={`h-6 w-4 absolute hidden md:block  bg-dropdown transform rotate-45 ${position}`}
+    ></div>
+  );
+};
 
-        </div>
-    )
-}
-
-export default Pointer
+export default Pointer;
