@@ -5,7 +5,11 @@ const GetstartedForm = () => {
     <div className=" md:max-w-lg overflow-visible shadow-lg">
       {/* <div className="w-full h-full absolute -right-10 bg-navy-800 z-10 "></div> */}
       <div className="flex flex-col text-white bg-blueGray-700 rounded-lg py-10 px-5 lg:max-w-lg lg:px-10 md:px-3 z-30 ">
-        <img src="/img/home-logo-alt.svg" alt="Home logo" className="mb-7" />
+        <img
+          src="/img/home-logo-alt.svg"
+          alt="Home logo"
+          className="mb-7 h-16"
+        />
         <span className="text-2xl text-center text-blue-100 font-medium">
           Get Started
         </span>

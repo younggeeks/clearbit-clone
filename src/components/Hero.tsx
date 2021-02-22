@@ -3,7 +3,7 @@ import React from "react";
 const HeroSection = () => {
   return (
     <>
-      <div className="flex flex-col justify-center items-center md:items-start">
+      <div className="flex flex-col justify-center items-center md:items-start z-100">
         <div className="text-3xl text-center md:text-4xl md:text-left flex flex-col font-normal md:font-light ">
           Join thousands of companies who rely on Clearbit to turn data into
           demand
